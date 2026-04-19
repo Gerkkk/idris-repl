@@ -1,0 +1,10 @@
+[custom.all.repl]
+type = "local"
+path = "."
+ipkg = "repl.ipkg"
+test = "test/test.ipkg"
+
+[custom.all.repl-test]
+type = "local"
+path = "test"
+ipkg = "test.ipkg"
