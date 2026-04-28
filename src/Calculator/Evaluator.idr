@@ -16,12 +16,14 @@ data Expr : Type -> Type where
     Pow  : Expr Int -> Expr Int -> Expr Int
     Var  : String -> Expr Int
 
+-- Конвертирует Int в Nat для передачи в powInt и возвращает Nothing для отрицательных
 intToNat : Int -> Maybe Nat
-intToNat n = 
-    if n < 0 
-        then Nothing 
+intToNat n =
+    if n < 0
+        then Nothing
         else Just (integerToNat (cast n))
 
+-- Целочисленное возведение в степень через рекурсию по Nat.
 powInt : Int -> Nat -> Int
 powInt _ 0 = 1
 powInt base (S exp) = base * powInt base exp

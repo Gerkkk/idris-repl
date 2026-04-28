@@ -16,11 +16,11 @@ authors = "Gerkkk"
 -- depends =
 
 -- modules to install
-modules = Core, Shell, Main, 
+modules = Core, Main,
+          Shell.Shell,
           Calculator.State, 
           Calculator.Evaluator, 
           Calculator.Parser, 
-          Calculator.Executor, 
           Calculator.Formatter
 
 -- main file (i.e. file to load at REPL)

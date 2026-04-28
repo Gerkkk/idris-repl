@@ -1,7 +1,5 @@
 module Calculator.State
 
-import Core
-
 %default total
 
 public export
@@ -10,5 +8,5 @@ record CalcState where
     vars : List (String, Int)
 
 export
-ReplState CalcState where
-    initialState = MkCalcState []
+initialState : CalcState
+initialState = MkCalcState []
